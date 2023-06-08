@@ -1,0 +1,22 @@
+# ref :https://github.com/howarder3/ironman2020_OpenCV_photoshop/blob/master/Day02_%E5%9C%96%E7%89%87%E8%AE%80%E5%8F%96%E9%A1%AF%E7%A4%BA%E5%AD%98%E6%AA%94_image_load_show_save.ipynb
+import cv2 as cv
+import numpy as np
+import matplotlib.pyplot as plt
+import glob
+
+from IPython.display import clear_output
+
+path = r"C:\Users\tiger\Pictures\Saved Pictures\2023-06-08 00 36 15.jpg"
+ #print(cv.version)
+
+#opencv can read
+if cv.haveImageReader(path):
+    print(cv.haveImageReader(path))
+    image = cv.imread(path)
+    #cv 與  matplotlib.pyplot  顏色順序不同
+    image_rgb = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+    #cv.imshow('pic',image)
+    plt.imshow(image_rgb)
+    plt.show()
+    #system pause
+    cv.waitKey(0)
