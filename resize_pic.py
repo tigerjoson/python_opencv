@@ -1,5 +1,5 @@
 import cv2 as cv;
-path =r'C:\\Users\\tiger\\Pictures\\test\\2.jpg';
+path =r'';
 #the order must be right
 #must call namedWindow
 cvwindowname = "resize fig demo"
