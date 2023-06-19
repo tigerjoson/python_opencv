@@ -2,7 +2,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-path = r"C:\\Users\\tiger\\Pictures\\test\\__kafuu_chino_gochuumon_wa_usagi_desu_ka_drawn_by_rouka_akatyann__28cf48ab82137b4ae7af3206110cba3d.jpg";
+path = r"filepath";
 img = cv.imread(path, cv.IMREAD_GRAYSCALE)
 assert img is not None, "file could not be read, check with os.path.exists()"
 ret,thresh1 = cv.threshold(img,127,255,cv.THRESH_BINARY)
