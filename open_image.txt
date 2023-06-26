@@ -6,7 +6,7 @@ import glob
 
 from IPython.display import clear_output
 
-path = r"C:\Users\tiger\Pictures\Saved Pictures\2023-06-08 00 36 15.jpg"
+path = r"path"
  #print(cv.version)
 
 #opencv can read
