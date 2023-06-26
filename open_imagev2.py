@@ -7,7 +7,7 @@ import glob
 
 from IPython.display import clear_output
 
-path = r"C:\Users\tiger\Pictures\Saved Pictures\2021-12-11 11 47 24.jpg"
+path = r""
  #print(cv.version)
 #因opencv(BGR) 與  matplotlib(RGB)  顏色順序不同需轉換
 def plt_image(imagebgr):
@@ -15,7 +15,7 @@ def plt_image(imagebgr):
     return image_rgb;
 
 #opencv can read
-if cv.haveImageReader(path):斯
+if cv.haveImageReader(path):
     print(cv.haveImageReader(path))
     image = cv.imread(path)
     
