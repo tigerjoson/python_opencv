@@ -11,7 +11,7 @@ from tkinter import filedialog;
 class mycvwindowclass:
     def __init__(self):
         self._cvwindowname = "resize window";
-        self._file = r"C:\Users\tiger\Pictures\test\12250161_923817071027707_8371995491597490875_n.jpg";
+        self._file = r"path";
     def setwindowname(self, cvwindowname: str):
         self._cvwindowname = cvwindowname
     def getWindowname(self):
