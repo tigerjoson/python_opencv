@@ -2,7 +2,7 @@
 
 import numpy as np
 import cv2 as cv
-path = r"C:\Users\tiger\Pictures\test\12250161_923817071027707_8371995491597490875_n.jpg"
+path = r"path_jpg"
 img = cv.imread(path, cv.IMREAD_GRAYSCALE)
 assert img is not None, "file could not be read, check with os.path.exists()"
 
