@@ -1,0 +1,49 @@
+#NumPy程式庫
+import numpy as np
+#OpenCV程式庫
+import cv2 as cv
+
+
+path =r"C:\Users\tiger\Desktop\HLLA6595.MP4"
+cap = cv.VideoCapture(path)
+#print(cap.isOpened())
+while cap.isOpened():
+     
+    #declare ret variable,which is assigined to " myvideo = cap.read()"
+    ret, myvideo = cap.read()
+    #print(ret)
+   
+    # if frame is read correctly ret is True
+    if not ret:
+       print("Can't receive frame (stream end?). Exiting ...")
+       break
+     
+   #cv.cvtColor(src, code[, dst[, dstCn]]	) ->	dst
+     #src ->input image: 8-bit unsigned, 16-bit unsigned ( CV_16UC... ), or single-precision floating-point.
+     #dst -> output image of the same size and depth as src.
+     #code -> color space conversion code (see ColorConversionCodes).
+     #dst -> Cnnumber of channels in the destination image; 
+#            if the parameter is 0, the number of the channels is derived automatically from src and code.
+     #for example below
+     #gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+      #cv.imshow('frame', gray)
+   
+   #cv.imshow( Name of the window,Image to be shown.) ->   None
+    #應該要先取名字，再呼叫imshow()
+    #cv.imshow('myvideo',myvideo)
+    cv.namedWindow('mynamedWindow')
+    
+    cv.imshow('mynamedWindow',myvideo)
+    
+      
+    if cv.waitKey(1) & 0xFF == ord('q'):
+        break
+
+#When everything done, release the video capture object
+cap.release()
+print("release the video capture object")
+#Closes all the frames
+
+cv.destroyAllWindows()
+print("Closes all the frames")
+

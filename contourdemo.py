@@ -1,8 +1,9 @@
-#https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+#ref https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+#ref chapt gpt
 
 import numpy as np
 import cv2 as cv
-path = r"path_jpg"
+path =r'C:\Users\tiger\Downloads\401561329_870238287806140_5954039294289215665_n.jpg';
 img = cv.imread(path, cv.IMREAD_GRAYSCALE)
 assert img is not None, "file could not be read, check with os.path.exists()"
 
@@ -31,10 +32,13 @@ cx = int(M['m10']/M['m00'])
 cy = int(M['m01']/M['m00'])
 #cv.contourArea => float
 area = cv.contourArea(cnt);
-print(type(area));
+#print(type(area));
 
 arcLength = cv.arcLength(cnt,True);
 
+contour_image = np.zeros_like(img)
+cv.drawContours(contour_image, contours, -1, 128, 2)
+cv.imshow('Contour Image', contour_image)
 ############ Douglas-Peucker algorithm.
 ##epsilon = 0.1*cv.arcLength(cnt,True)
 ##approx = cv.approxPolyDP(cnt,epsilon,True)

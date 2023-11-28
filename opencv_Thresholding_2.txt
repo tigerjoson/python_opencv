@@ -1,0 +1,12 @@
+import cv2 as cv
+import numpy as np
+from matplotlib import pyplot as plt
+
+photopath= r"C:\Users\tiger\Desktop\IMG_7538.jpg"
+
+if cv.haveImageReader(photopath):
+	img = cv.imread(photopath)
+	cv.imshow('img',img)
+	cv.waitKey(0)
+else:
+	print(cv.haveImageReader(photopath))

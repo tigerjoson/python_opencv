@@ -1,0 +1,7 @@
+# my basic ignore
+myoop/*
+__pycache__/*
+*.jpg
+*.png
+*pdf
+*.docx

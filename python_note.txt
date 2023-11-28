@@ -1,0 +1,29 @@
+#cmd note
+
+#python interactive mode
+python
+
+#load python script file
+python playe_video.txt
+
+#縮排對python 有意義
+
+#print ver.
+import sys
+print(sys.version)
+
+#User-Defined Functions
+ def f(x):
+        return x**2 + 1
+#if input f(4) => 17
+
+
+#example for ord function & chr()
+
+character = 'P'
+
+# find unicode of P
+unicode_char = ord(character)
+print(unicode_char)
+chr(unicode_char)
+# Output: 80

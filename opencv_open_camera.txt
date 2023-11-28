@@ -1,0 +1,18 @@
+import cv2 as cv
+
+capture =cv.VideoCapture(0)
+while capture.isOpened():
+   #capture.set(3,640)
+   #capture.set(4,480)
+   havenextframe, flag=capture.read()
+     
+   if not havenextframe:
+     print("Can't receive frame (stream end?). Exiting ...")
+     break
+  
+   cv.namedWindow('mynamedWindow')
+   cv.imshow('mynamedWindow',flag)
+   
+   if cv.waitKey(1) & 0xFF == ord('q'):
+    break
+    
