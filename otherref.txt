@@ -1,0 +1,2 @@
+#Thony IDE
+Ctrl + Space => auto complete
