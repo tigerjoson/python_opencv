@@ -1,9 +1,13 @@
 import tkinter as tk
 from tkinter import colorchooser
+import pyperclip
+
 #win11 copilot
 def pick_color():
     color_code = colorchooser.askcolor(title="Choose a color")
     label.config(text=f"Selected Color: {color_code[1]}", bg=color_code[1])
+    #clipboard
+    pyperclip.copy(color_code[1])
 
 root = tk.Tk()
 root.title("Color Picker")
